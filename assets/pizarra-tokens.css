@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Tema Pizarra · v1 · tokens portables
+   Uso: copiar a otro proyecto, cargar ANTES de su CSS y mapear sus variables
+   locales (--bg, --panel, --ink…) a estos --pz-*. La preferencia se guarda en
+   localStorage "pz-theme" ('light' | 'dark') y se aplica en <html data-theme>.
+   ========================================================================== */
+:root{
+  color-scheme:light;
+  /* Superficies (de más hundida a más elevada) */
+  --pz-sunken:#eeeadf;   /* sidebar, barras fijas */
+  --pz-bg:#f3f0e8;       /* fondo de página */
+  --pz-surface:#faf8f3;  /* tarjetas */
+  --pz-raise:#fffefb;    /* diálogos, lector, popovers, nav activa */
+  --pz-soft:#edf0e6;     /* bloques internos (logs, burbujas) */
+  --pz-hover:#e9ece2;
+  /* Bordes */
+  --pz-line:#dcded3;--pz-line-strong:#b2bdb0;
+  /* Texto */
+  --pz-ink:#1d221f;--pz-muted:#62665f;--pz-faint:#767971;
+  /* Acento del proyecto y estados */
+  --pz-accent:#42685f;--pz-accent-soft:#e5ebe1;--pz-violet:#796887;
+  --pz-invert-bg:#1d221f;--pz-invert-ink:#faf8f3;--pz-invert-muted:#d7dfd3;
+  --pz-focus:#42685f;--pz-success:#42685f;--pz-danger:#a33630;--pz-hl:oklch(.88 .09 90);
+  --pz-scrim:rgba(29,34,31,.26);
+  --pz-shadow:0 24px 60px -28px rgba(29,34,31,.32),0 2px 6px rgba(29,34,31,.05);
+  --pz-disabled:.45;
+  /* Identidad de los sistemas: *-ink para texto, el resto para líneas y puntos */
+  --pz-hermes:#9fbea5;--pz-hermes-ink:#377249;
+  --pz-claude:#d6a081;--pz-claude-ink:#a1592e;
+  --pz-codex:#9abbd2;--pz-codex-ink:#34698c;
+}
+:root[data-theme=dark]{
+  color-scheme:dark;
+  --pz-sunken:#151d25;--pz-bg:#1a232c;--pz-surface:#232c36;--pz-raise:#2b353f;--pz-soft:#202932;--pz-hover:#343e48;
+  --pz-line:#3d464f;--pz-line-strong:#58626c;
+  --pz-ink:#f3f2ed;--pz-muted:#bbc6ce;--pz-faint:#95a0a9;
+  --pz-accent:#9bd6bf;--pz-accent-soft:#29403a;--pz-violet:#cab8e1;
+  --pz-invert-bg:#e9ece8;--pz-invert-ink:#1a232c;--pz-invert-muted:#4a5560;
+  --pz-focus:#9bd6bf;--pz-success:#9bd6bf;--pz-danger:#f0a39a;--pz-hl:#5c4f22;
+  --pz-scrim:rgba(8,12,17,.58);
+  --pz-shadow:0 24px 60px -24px rgba(4,8,12,.7),0 0 0 1px rgba(255,255,255,.03);
+  --pz-disabled:.42;
+  --pz-hermes:#9bd4a9;--pz-hermes-ink:#9bd4a9;
+  --pz-claude:#f0ad7f;--pz-claude-ink:#f0ad7f;
+  --pz-codex:#91c5ea;--pz-codex-ink:#91c5ea;
+}
